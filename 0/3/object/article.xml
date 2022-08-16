@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+  <front>
+    <journal-meta>
+      <journal-id/>
+      <journal-title-group>
+</journal-title-group>
+      <issn/>
+      <publisher>
+        <publisher-name/>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Lineal admixture time: an interdisciplinary
+definition</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">0000-0002-5014-4809</contrib-id>
+          <name>
+            <surname>Ellerman</surname>
+            <given-names>E. Castedo</given-names>
+          </name>
+          <email>castedo@castedo.com</email>
+        </contrib>
+      </contrib-group>
+      <pub-date date-type="eprint" publication-format="electronic" iso-8601-date="2022-04-26">
+        <day>26</day>
+        <month>4</month>
+        <year>2022</year>
+      </pub-date>
+      <permissions>
+        <copyright-statement>© 2022, Ellerman et al</copyright-statement>
+        <copyright-year>2022</copyright-year>
+        <copyright-holder>Ellerman et al</copyright-holder>
+        <license license-type="open-access">
+          <ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/">https://creativecommons.org/licenses/by/4.0/</ali:license_ref>
+          <license-p>This document is distributed under a Creative Commons
+Attribution 4.0 International license.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p><bold>STAGE:</bold> DISCUSSION DOCUMENT</p>
+        <p>
+          <bold>OBJECTIVES:</bold>
+        </p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Define <italic>lineal admixture time</italic>.</p>
+          </list-item>
+          <list-item>
+            <p>Invite discussion and feedback, especially regarding questions at
+    the end of this document.</p>
+          </list-item>
+          <list-item>
+            <p>Facilitate the discovery of mathematical tools, using this
+    definition, that are useful to downstream empirical research.</p>
+          </list-item>
+        </list>
+        <p><bold>SIGNIFICANCE:</bold> This definition is interpretable within
+empirical research without assuming particular mathematical models of
+demographic or genetic processes.</p>
+        <p><bold>DOWNSTREAM RESEARCH:</bold> The estimation of the timing and
+extent of interbreeding between previously separated populations.</p>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="background">
+      <title>Background</title>
+      <p>The genealogies of a population reflect population events of the
+  past. Lineages, at the organismal level, are lines of descent carrying
+  genetic information through a population's genealogies. These lineages
+  are a link between genetic evidence and population events of the past.
+  In contrast to estimates of purely genetic quantities, estimates of
+  quantities about lineages can have closer correspondence to
+  non-genetic evidence, such as archaeological, geological, and cultural
+  evidence.</p>
+    </sec>
+    <sec id="definition-of-lineal-admixture-time">
+      <title>Definition of lineal admixture time</title>
+      <p>We define <italic>lineal admixture time</italic> per lineage. This
+  measure in time duration depends on two reference time points:</p>
+      <list list-type="order">
+        <list-item>
+          <p>a past time horizon when all ancestors are members of separate
+      non-admixed subpopulations, and</p>
+        </list-item>
+        <list-item>
+          <p>an observation time, such as the present.</p>
+        </list-item>
+      </list>
+      <p>Given a lineage, the <bold>lineal admixture time</bold> is defined
+  as:</p>
+      <p><italic>the amount of time since fertilization of the first admixed
+  individual in the lineage (or zero if the lineage has no such
+  individual)</italic>.</p>
+      <p>Stated more compactly, lineal admixture time is time since a
+  lineage's first admixed fertilization. Admixed individuals are all
+  individual whose parents are not from the same non-admixed
+  subpopulations.</p>
+      <p>The <italic>average lineal admixture time</italic> of an individual
+  is an average over all lineages ending at that individual. At every
+  merging of lineages through offspring, equal weighting is given to the
+  respective sets of maternal and paternal lineages. The <italic>average
+  lineal admixture time</italic> of a group of individuals is the
+  average lineal admixture time across all those individuals.</p>
+      <p>It is worth noting that non-zero admixture times do not remain
+  constant if the observation time changes. It follows that the non-zero
+  average admixture time of an individual is not fixed. It will increase
+  if the observation time increases with age.</p>
+    </sec>
+    <sec id="an-example-with-mendels-peas">
+      <title>An example with Mendel's peas</title>
+      <p>We consider an example of lineal admixture times with Mendel's
+  famous peas
+  <xref alt="1" rid="ref-abbott_experiments_2016" ref-type="bibr">1</xref>.
+  We imagine one of his classic experiments starting in 1860 and ending
+  in 1862. Because the pea plant is an annual plant, each generation is
+  separated by one year. During the lifetime of one generation,
+  fertilization of the next generation occurs, in the form of seeds
+  (illustrated with a <monospace>.</monospace> symbol).</p>
+      <preformat>1860  A-.-Y   B-.-Z
+        |       | 
+1861    M---.---N
+            | 
+1862        Q</preformat>
+      <p>In this example we will treat the non-admixed ancestral
+  subpopulations to be true-breeding pea plant varieties in 1860. Plants
+  <monospace>A</monospace> and <monospace>B</monospace> in the diagram
+  are non-admixed plants with round peas. Plants
+  <monospace>Y</monospace> and <monospace>Z</monospace> are non-admixed
+  plants with wrinkled peas. These two subpopulations grow and are
+  crossed in 1860 producing seeds that same year. Because they were
+  crossed, the offspring <monospace>M</monospace> and
+  <monospace>N</monospace> are both admixed (hybrid). This first admixed
+  (hybrid) generation will produce seeds in 1861 for the second admixed
+  generation, plant <monospace>Q</monospace>.</p>
+      <p>Plant <monospace>Q</monospace> has four lineages:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>
+            <monospace>Q-M-A</monospace>
+          </p>
+        </list-item>
+        <list-item>
+          <p>
+            <monospace>Q-M-Y</monospace>
+          </p>
+        </list-item>
+        <list-item>
+          <p>
+            <monospace>Q-N-B</monospace>
+          </p>
+        </list-item>
+        <list-item>
+          <p>
+            <monospace>Q-N-Z</monospace>
+          </p>
+        </list-item>
+      </list>
+      <p>In these lineages the first admixed individuals are
+  <monospace>M</monospace> and <monospace>N</monospace>, both of which
+  were fertilized in 1860. The first admixed fertilizations occur in
+  1860. Thus the lineal admixture time for all lineages of
+  <monospace>Q</monospace>, observed in 1862, is <bold>2
+  years</bold>.</p>
+    </sec>
+    <sec id="hybrid-generation-numbers">
+      <title>Hybrid generation numbers</title>
+      <p>A related definition measures generation number rather than time.
+  Given a lineage, the <italic>lineal hybrid generation number</italic>
+  is defined as:</p>
+      <p><italic>the number of admixed individual in the
+  lineage</italic>.</p>
+      <p>Because peas are annual, the lineal admixture times in years
+  coincide exactly with the lineal hybrid generation numbers. The first
+  and second hybrid generations are often referred to as
+  <inline-formula><alternatives><tex-math><![CDATA[F_1]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mi>F</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+  and <inline-formula><alternatives><tex-math><![CDATA[F_2]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mi>F</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>
+  <xref alt="2" rid="ref-hartl_essential_2006" ref-type="bibr">2</xref>.
+  Lineal average hybird generation numbers are a generalization of
+  indexes given to hybrid generations <inline-formula><alternatives><tex-math><![CDATA[F_1]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mi>F</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>,
+  <inline-formula><alternatives><tex-math><![CDATA[F_2]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mi>F</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula>,
+  etc...</p>
+    </sec>
+    <sec id="an-example-with-humans">
+      <title>An example with humans</title>
+      <p>These definitions are inspired by the use of generation numbers to
+  infer admixture timing in the study of admixture in Greenland
+  <xref alt="3" rid="ref-waples_genetic_2021" ref-type="bibr">3</xref>.</p>
+      <p>We give a hypothetical example in Greenland at an observation time
+  of 1600 CE. We categorize the ancestors at a time horizon of 1000 CE
+  into separate non-interbreeding Inuit and European subpopulations. We
+  denote the fertilization and death of an individual with symbols
+  <monospace>.</monospace> and <monospace>x</monospace>, respectively,
+  and write names at the time an individual is a 3-month-old baby.</p>
+      <preformat>1500  Erik
+1510   |       Aaju
+1520   |         |   Natar     Atuat
+1530   |----.----|     |         |
+1540   |  Tagak  |     |----.----|
+1550   |    |    x     x  Mikak  |
+1560   x    |               |    |
+1570        |-------.-------|    x
+1580        x     Kiviaq    |
+1590                |       x
+1600                |        </preformat>
+      <p>We imagine Erik as only having European ancestors and Aaju, Natar
+  and Atuat only having Intuit ancestors. As of 1600 CE, the lineages
+  are:</p>
+      <list list-type="bullet">
+        <list-item>
+          <p>Kiviaq-Tagak-Erik</p>
+        </list-item>
+        <list-item>
+          <p>Kiviaq-Tagak-Aaju</p>
+        </list-item>
+        <list-item>
+          <p>Kiviaq-Mikak-Natar</p>
+        </list-item>
+        <list-item>
+          <p>Kiviaq-Mikak-Atuat</p>
+        </list-item>
+      </list>
+      <p>For the Tagak lineages, the first admixed fertilization is in 1530.
+  In contrast, the Mikak lineages have a first admixed fertilization in
+  1570. Thus the lineal admixture times are equal parts 70 years and 30
+  years, for an average lineal admixture time of 50 years. The
+  respective lineal hybrid generation numbers are 1 and 2 resulting in
+  an average lineal hybrid generation number of 1.5.</p>
+    </sec>
+    <sec id="advantages-of-lineal-admixture-time">
+      <title>Advantages of lineal admixture time</title>
+      <p>Lineal admixture time has a number of advantages as a quantity for
+  research.</p>
+      <p>Firstly, it is independent of any particular model of an admixture
+  process. With enough genealogical information one could calculate
+  lineal admixture times of a real group of individuals. There is one
+  true set of lineal admixture times for a real population. But
+  realistically, we can only hope to estimate those numbers based on
+  evidence and models. But the definition exists independent of any
+  particular model used for estimation.</p>
+      <p>Secondly, the interpretation of lineal admixture time does not
+  require fluency in probability theory. Researchers with interests in
+  empirical evidence and not mathematics can make use of estimates of
+  lineal admixture times.</p>
+      <p>Thirdly, we conjecture that <italic>distributions</italic> of
+  lineal admixture times across individuals, and groups of individuals
+  will prove to be a useful mathematical tool in the timing of
+  admixture. This conjecture is based on not-yet-documented mathematical
+  work by ECE. Lineal admixture time is conveniently representable as a
+  random variable from a stochastic process in which lineages are random
+  objects.</p>
+      <p>The same population events that affect admixture also affect
+  hybridization, introgression, and gene flow. We conjecture that
+  statistical tools for estimating distributions of lineal admixture
+  time will also be useful to these related topics in addition to
+  admixture timing.</p>
+      <p>The Greenland example illustrates how average lineal admixture time
+  is easily testable against non-genetic lines of evidence. If a genetic
+  model estimates the average lineal admixture time of present day
+  Greenlanders to be 500 years, we can consider historical and
+  archaeological evidence to falsify that estimate.</p>
+    </sec>
+    <sec id="end">
+      <title>End</title>
+      <p>This document presents a definition of <italic>lineal admixture
+  time</italic>. This quantity is the basis for current mathematical
+  studies of ECE. Feedback and input is greatly appreciated, especially
+  regarding the relevance to downstream empirical research. In
+  particular, the following questions are of interest:</p>
+      <list list-type="order">
+        <list-item>
+          <p>Is <italic>lineal admixture time</italic> easily understood and
+      interpretable without fluency in probability theory?</p>
+        </list-item>
+        <list-item>
+          <p>Does <italic>lineal admixture time</italic> benefit from being
+      comparable to non-genetic lines of evidence (i.e archaeological,
+      geological, linguistic, historical, cultural)?</p>
+        </list-item>
+        <list-item>
+          <p>What are existing terms for this specific definition of
+      admixture time?</p>
+        </list-item>
+        <list-item>
+          <p>Are the following terms:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>lineage</p>
+            </list-item>
+            <list-item>
+              <p>genealogy</p>
+            </list-item>
+            <list-item>
+              <p>lineal admixture time</p>
+            </list-item>
+            <list-item>
+              <p>lineal hybrid generation number</p>
+            </list-item>
+          </list>
+          <p>potentially confusing in the way they are used in this
+      document?</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="references">
+      <title>References</title>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="ref-abbott_experiments_2016">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Abbott</surname>
+              <given-names>Scott</given-names>
+            </name>
+            <name>
+              <surname>Fairbanks</surname>
+              <given-names>Daniel J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Experiments on Plant Hybrids by Gregor Mendel</article-title>
+          <source>Genetics</source>
+          <year iso-8601-date="2016-10">2016</year>
+          <month>10</month>
+          <volume>204</volume>
+          <issue>2</issue>
+          <issn>1943-2631</issn>
+          <pub-id pub-id-type="doi">10.1534/genetics.116.195198</pub-id>
+          <pub-id pub-id-type="pmid">27729492</pub-id>
+          <fpage>407</fpage>
+          <lpage>422</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-hartl_essential_2006">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hartl</surname>
+              <given-names>Daniel L.</given-names>
+            </name>
+            <name>
+              <surname>Jones</surname>
+              <given-names>Elizabeth W.</given-names>
+            </name>
+          </person-group>
+          <source>Essential genetics: A genomics perspective</source>
+          <publisher-name>Jones; Bartlett Publishers</publisher-name>
+          <publisher-loc>Boston</publisher-loc>
+          <year iso-8601-date="2006">2006</year>
+          <edition>4th ed</edition>
+          <isbn>978-0-7637-3527-2</isbn>
+        </element-citation>
+      </ref>
+      <ref id="ref-waples_genetic_2021">
+        <element-citation publication-type="article-journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Waples</surname>
+              <given-names>Ryan K.</given-names>
+            </name>
+            <name>
+              <surname>Hauptmann</surname>
+              <given-names>Aviaja L.</given-names>
+            </name>
+            <name>
+              <surname>Seiding</surname>
+              <given-names>Inge</given-names>
+            </name>
+            <name>
+              <surname>Jørsboe</surname>
+              <given-names>Emil</given-names>
+            </name>
+            <name>
+              <surname>Jørgensen</surname>
+              <given-names>Marit E.</given-names>
+            </name>
+            <name>
+              <surname>Grarup</surname>
+              <given-names>Niels</given-names>
+            </name>
+            <name>
+              <surname>Andersen</surname>
+              <given-names>Mette K.</given-names>
+            </name>
+            <name>
+              <surname>Larsen</surname>
+              <given-names>Christina V. L.</given-names>
+            </name>
+            <name>
+              <surname>Bjerregaard</surname>
+              <given-names>Peter</given-names>
+            </name>
+            <name>
+              <surname>Hellenthal</surname>
+              <given-names>Garrett</given-names>
+            </name>
+            <name>
+              <surname>Hansen</surname>
+              <given-names>Torben</given-names>
+            </name>
+            <name>
+              <surname>Albrechtsen</surname>
+              <given-names>Anders</given-names>
+            </name>
+            <name>
+              <surname>Moltke</surname>
+              <given-names>Ida</given-names>
+            </name>
+          </person-group>
+          <article-title>The genetic history of Greenlandic-European contact</article-title>
+          <source>Current biology: CB</source>
+          <year iso-8601-date="2021-05">2021</year>
+          <month>05</month>
+          <volume>31</volume>
+          <issue>10</issue>
+          <issn>1879-0445</issn>
+          <pub-id pub-id-type="doi">10.1016/j.cub.2021.02.041</pub-id>
+          <pub-id pub-id-type="pmid">33711251</pub-id>
+          <fpage>2214</fpage>
+          <lpage>2219.e4</lpage>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
