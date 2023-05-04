@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN"
+                  "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+</journal-title-group>
+<issn></issn>
+<publisher>
+<publisher-name></publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<title-group>
+<article-title>A Simple Estimator of Lineal Admixture Time</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-5014-4809</contrib-id>
+<name>
+<surname>Ellerman</surname>
+<given-names>E. Castedo</given-names>
+</name>
+<email>castedo@castedo.com</email>
+</contrib>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-03-03">
+<day>3</day>
+<month>3</month>
+<year>2023</year>
+</pub-date>
+<permissions>
+<copyright-statement>© 2023, Ellerman et al</copyright-statement>
+<copyright-year>2023</copyright-year>
+<copyright-holder>Ellerman et al</copyright-holder>
+<license license-type="open-access">
+<ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/">https://creativecommons.org/licenses/by/4.0/</ali:license_ref>
+<license-p>This document is distributed under a Creative Commons Attribution 4.0 International license.</license-p>
+</license>
+</permissions>
+<abstract>
+<p><bold>STAGE:</bold> Early Draft</p>
+<p><bold>DOCUMENT TYPE:</bold> Mathematical Results</p>
+<p><bold>OBJECTIVES</bold></p>
+<list list-type="bullet">
+  <list-item>
+    <p>Outline simple stochastic process of gametic lineages</p>
+  </list-item>
+  <list-item>
+    <p>Deduce estimator of lineal admixture generation number</p>
+  </list-item>
+</list>
+</abstract>
+</article-meta>
+</front>
+<body>
+<sec id="introduction">
+  <title>Introduction</title>
+  <p><ext-link ext-link-type="uri" xlink:href="https://perm.pub/DZFCt68peNNajZ34WtZni9VYxzo/0">Lineal admixture time</ext-link>
+  is a microscale measure of admixture time.
+  In this document, we derive an estimator of lineal admixture time.
+  This derivation is from a stochastic process where the underlying
+  random object is a
+  <ext-link ext-link-type="uri" xlink:href="https://perm.pub/0iV47kWzQAuyONrIDG538k3x3Qc/0">gametic lineage</ext-link>.</p>
+</sec>
+<sec id="a-simple-stochastic-process">
+  <title>A simple stochastic process</title>
+  <p>We define a simple stochastic process with the following properties:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>discrete regular time steps,</p>
+    </list-item>
+    <list-item>
+      <p>infinite population size,</p>
+    </list-item>
+    <list-item>
+      <p>proportion <inline-formula><alternatives>
+      <tex-math><![CDATA[\alpha_i]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula> from <inline-formula><alternatives>
+      <tex-math><![CDATA[i]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>-th ancestral group,</p>
+    </list-item>
+    <list-item>
+      <p>stationary, and</p>
+    </list-item>
+    <list-item>
+      <p>underlying random object is a <ext-link ext-link-type="uri" xlink:href="https://perm.pub/0iV47kWzQAuyONrIDG538k3x3Qc/0">gametic lineage</ext-link>.</p>
+    </list-item>
+  </list>
+  <p>We further define an “island subpopulation” of individuals
+  for which at each time step:</p>
+  <list list-type="order">
+    <list-item>
+      <p>there is random mating and then</p>
+    </list-item>
+    <list-item>
+      <p>immigration such that <inline-formula><alternatives>
+      <tex-math><![CDATA[\phi]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ϕ</mml:mi></mml:math></alternatives></inline-formula> of the population is new non-admixed
+      immigrants</p>
+    </list-item>
+  </list>
+  <p>The motivation for this stochastic process is to derive an estimator of
+  lineal admixture time.</p>
+  <p>Lineal admixture time requires that there be a time horizon
+  at which all individuals can be categorized into separate
+  source populations.</p>
+  <p>Since the stochastic process in this document is stationary,
+  this condition of full categorization of all lineages
+  into ancestral source populations is only achieved
+  asymptotically. In other words, for any lineage,
+  there exists some time prior to which all gametes in the lineage
+  are within one of the source populations.
+  (Formally, this
+  condition requires some measurable subset of exceptions,
+  but of zero probability.)</p>
+</sec>
+<sec id="main-result">
+  <title>Main Result</title>
+  <sec id="formal-notation">
+    <title>Formal notation</title>
+    <p>From the underlying random gametic lineage, two random variables
+    are defined by the stochastic process:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p><inline-formula><alternatives>
+        <tex-math><![CDATA[M_t]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>M</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:math></alternatives></inline-formula> as lineal admixture time (or generation number) and</p>
+      </list-item>
+      <list-item>
+        <p><inline-formula><alternatives>
+        <tex-math><![CDATA[A_t]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>A</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:math></alternatives></inline-formula> as ancestral origin, represented as one-hot vector.</p>
+      </list-item>
+    </list>
+    <p>For notational brevity we use the notation
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \operatorname{P}_{ t}\!\left\{{ ...}\right\}
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mo>P</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>.</mml:mi><mml:mi>.</mml:mi><mml:mi>.</mml:mi><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula>
+    and
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \operatorname{E}_{ t}\!\left[{ ...}\right]
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mo>E</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>.</mml:mi><mml:mi>.</mml:mi><mml:mi>.</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula>
+    to denote probability and expectation, respectively, of expressions
+    where <inline-formula><alternatives>
+    <tex-math><![CDATA[M]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>M</mml:mi></mml:math></alternatives></inline-formula> and <inline-formula><alternatives>
+    <tex-math><![CDATA[A]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>A</mml:mi></mml:math></alternatives></inline-formula> denote <inline-formula><alternatives>
+    <tex-math><![CDATA[M_t]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>M</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:math></alternatives></inline-formula> and <inline-formula><alternatives>
+    <tex-math><![CDATA[A_t]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>A</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:math></alternatives></inline-formula> respectively.</p>
+  </sec>
+  <sec id="base-facts">
+    <title>Base Facts</title>
+    <p>From the definition of the “island subpopulation”
+    we deduce that
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \operatorname{P}_{ t+1}\!\left\{{  M=0 \wedge A=\mathrm{e}_i }\right\} = \phi \alpha_i + (1 - \phi) \operatorname{P}_{ t}\!\left\{{  M=0 \wedge A=\mathrm{e}_i }\right\}^2
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mo>P</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mo>∧</mml:mo><mml:mi>A</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mi mathvariant="normal">e</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>ϕ</mml:mi><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mo>P</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mo>∧</mml:mo><mml:mi>A</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mi mathvariant="normal">e</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:math></alternatives></disp-formula></p>
+    <p>From the definition of lineal admixture generation number,
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \begin{aligned}
+    \operatorname{E}_{ t+1}\!\left[{ M}\right]
+      & = (\operatorname{E}_{ t}\!\left[{ M | M>0}\right] + 1) \operatorname{P}_{ t}\!\left\{{ M>0}\right\}^2 (1-\phi)  \\
+      & + 2 \left(\frac{1}{2} \operatorname{E}_{ t}\!\left[{ M | M>0}\right] + 1\right) \operatorname{P}_{ t}\!\left\{{ M>0}\right\} \operatorname{P}_{ t}\!\left\{{ M=0}\right\} (1-\phi)  \\
+      & + \left( \operatorname{P}_{ t}\!\left\{{ M=0}\right\}^2 - \sum_i \operatorname{P}_{ t}\!\left\{{ M=0 \wedge A=e_i}\right\}^2 \right) (1-\phi)
+    \end{aligned}
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mo>E</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>M</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mo>E</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>M</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>M</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mo>P</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>M</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>+</mml:mo><mml:mn>2</mml:mn><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:msub><mml:mo>E</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>M</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>M</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mo>P</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>M</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow><mml:msub><mml:mo>P</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>+</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mo>P</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo>−</mml:mo><mml:munder><mml:mo>∑</mml:mo><mml:mi>i</mml:mi></mml:munder><mml:msub><mml:mo>P</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mo>∧</mml:mo><mml:mi>A</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mi>e</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
+  </sec>
+  <sec id="derivation">
+    <title>Derivation</title>
+    <p>Given the assumptions of stationarity, we can define:</p>
+    <p>Let <inline-formula><alternatives>
+    <tex-math><![CDATA[x_i := \operatorname{P}_{ t}\!\left\{{  M=0 \wedge A=\mathrm{e}_i }\right\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>x</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>:=</mml:mo><mml:msub><mml:mo>P</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mo>∧</mml:mo><mml:mi>A</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mi mathvariant="normal">e</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+    <p><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    x_i = \phi \alpha_i + (1-\phi) x_i^2
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>x</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mi>ϕ</mml:mi><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msubsup><mml:mi>x</mml:mi><mml:mi>i</mml:mi><mml:mn>2</mml:mn></mml:msubsup></mml:mrow></mml:math></alternatives></disp-formula>
+    where
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \vec{\alpha} := {\operatorname{E}\!\left[{ A}\right]}
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">⃗</mml:mo></mml:mover><mml:mo>:=</mml:mo><mml:mrow><mml:mo>E</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>A</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
+    <p>By theorem 1, the only quadratic solution for <inline-formula><alternatives>
+    <tex-math><![CDATA[x_i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>x</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula> is</p>
+    <p><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    x_i = \frac{ 1 - \sqrt{1 - 4 \phi (1- \phi) \alpha_i} }{ 2(1-\phi) }
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>x</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msqrt><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:mi>ϕ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msqrt></mml:mrow><mml:mrow><mml:mn>2</mml:mn><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:mrow></mml:math></alternatives></disp-formula></p>
+    <p>Let <inline-formula><alternatives>
+    <tex-math><![CDATA[q := \operatorname{P}_{ t}\!\left\{{ M=0}\right\}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>q</mml:mi><mml:mo>:=</mml:mo><mml:msub><mml:mo>P</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">{</mml:mo><mml:mi>M</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">}</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>, thus
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    q = \phi + (1 - \phi) \sum_i x_i^2
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>q</mml:mi><mml:mo>=</mml:mo><mml:mi>ϕ</mml:mi><mml:mo>+</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:munder><mml:mo>∑</mml:mo><mml:mi>i</mml:mi></mml:munder><mml:msubsup><mml:mi>x</mml:mi><mml:mi>i</mml:mi><mml:mn>2</mml:mn></mml:msubsup></mml:mrow></mml:math></alternatives></disp-formula></p>
+    <p>We define
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[\mu := \operatorname{E}_{ t}\!\left[{ M}\right]]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>μ</mml:mi><mml:mo>:=</mml:mo><mml:msub><mml:mo>E</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>M</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula>
+    which is the expected lineal admixture time (and generation number).</p>
+    <p>Given the base facts, we make the following deduction using the newly
+    defined variables <inline-formula><alternatives>
+    <tex-math><![CDATA[\mu]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>μ</mml:mi></mml:math></alternatives></inline-formula>, <inline-formula><alternatives>
+    <tex-math><![CDATA[\phi]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ϕ</mml:mi></mml:math></alternatives></inline-formula> and <inline-formula><alternatives>
+    <tex-math><![CDATA[x_i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>x</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>.
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \begin{aligned}
+    \mu
+      & = ({\operatorname{E}\!\left[{ M | M>0}\right]} + 1) (1-q)^2 (1-\phi)  \\
+      & + 2 \left(\frac{1}{2} \operatorname{E}_{ t}\!\left[{ M | M>0}\right] + 1\right) (1-q) q (1-\phi)  \\
+      & + \left( q^2 - \sum_i x_i^2 \right) (1-\phi)  \\
+      & = \mu (1-q) (1-\phi) + (1-q)^2 (1-\phi) \\
+      & + \mu q (1-\phi) + 2 (1-q) q (1-\phi)  \\
+      & + \left( q^2 - \sum_i x_i^2 \right) (1-\phi)  \\
+      & = \mu (1-\phi) + ((1 - q) + q)^2 (1-\phi) - (1-\phi) \sum_i x_i^2  \\
+    0 & = - \mu \phi + 1 - q  \\
+    \mu & = \frac{1-q}{\phi}
+    \end{aligned}
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>μ</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mrow><mml:mo>E</mml:mo><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>M</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>M</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow></mml:mrow><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>q</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>+</mml:mo><mml:mn>2</mml:mn><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:msub><mml:mo>E</mml:mo><mml:mi>t</mml:mi></mml:msub><mml:mspace width="-0.167em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>M</mml:mi><mml:mo stretchy="false" form="prefix">|</mml:mo><mml:mi>M</mml:mi><mml:mo>&gt;</mml:mo><mml:mn>0</mml:mn><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>q</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>q</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>+</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msup><mml:mi>q</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo>−</mml:mo><mml:munder><mml:mo>∑</mml:mo><mml:mi>i</mml:mi></mml:munder><mml:msubsup><mml:mi>x</mml:mi><mml:mi>i</mml:mi><mml:mn>2</mml:mn></mml:msubsup><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mi>μ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>q</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>q</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>+</mml:mo><mml:mi>μ</mml:mi><mml:mi>q</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mn>2</mml:mn><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>q</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>q</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>+</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msup><mml:mi>q</mml:mi><mml:mn>2</mml:mn></mml:msup><mml:mo>−</mml:mo><mml:munder><mml:mo>∑</mml:mo><mml:mi>i</mml:mi></mml:munder><mml:msubsup><mml:mi>x</mml:mi><mml:mi>i</mml:mi><mml:mn>2</mml:mn></mml:msubsup><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mi>μ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>q</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mi>q</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:munder><mml:mo>∑</mml:mo><mml:mi>i</mml:mi></mml:munder><mml:msubsup><mml:mi>x</mml:mi><mml:mi>i</mml:mi><mml:mn>2</mml:mn></mml:msubsup></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mn>0</mml:mn></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mo>−</mml:mo><mml:mi>μ</mml:mi><mml:mi>ϕ</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>q</mml:mi></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>μ</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>q</mml:mi></mml:mrow><mml:mi>ϕ</mml:mi></mml:mfrac></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
+    <p>Replacing <inline-formula><alternatives>
+    <tex-math><![CDATA[q]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>q</mml:mi></mml:math></alternatives></inline-formula> gets
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \mu = \frac{1-\phi}{\phi} \left( 1 - \sum_i x_i^2 \right)
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>μ</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi></mml:mrow><mml:mi>ϕ</mml:mi></mml:mfrac><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:munder><mml:mo>∑</mml:mo><mml:mi>i</mml:mi></mml:munder><mml:msubsup><mml:mi>x</mml:mi><mml:mi>i</mml:mi><mml:mn>2</mml:mn></mml:msubsup><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
+    <p>We conjecture that this formula serves as a consistent maximum likelihood
+    estimator.</p>
+  </sec>
+  <sec id="estimation-of-phi">
+    <title>Estimation of <inline-formula><alternatives>
+    <tex-math><![CDATA[\phi]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>ϕ</mml:mi></mml:math></alternatives></inline-formula></title>
+    <p>Let <inline-formula><alternatives>
+    <tex-math><![CDATA[\dot{\alpha}_i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula> denote the expected frequency of an <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>-th ancestral
+    source.
+    Let <inline-formula><alternatives>
+    <tex-math><![CDATA[\ddot{\alpha}_{i,j}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̈</mml:mo></mml:mover><mml:mrow><mml:mi>i</mml:mi><mml:mo>,</mml:mo><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula> denote the frequency of a diploid genotype
+    with an <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>-th maternal ancestral source and <inline-formula><alternatives>
+    <tex-math><![CDATA[j]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>-ith paternal ancestral
+    source.</p>
+    <p>Thus
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \begin{aligned}
+    \ddot{\alpha}_{i,i} 
+      & = \phi \dot{\alpha}_i + (1-\phi) \dot{\alpha}_i^2  \\
+      & = \phi \dot{\alpha}_i (1 - \dot{\alpha}_i) + \dot{\alpha}_i^2  \\
+    \phi & = \frac{
+        \ddot{\alpha}_{i,i} - \dot{\alpha}_i^2
+      }{
+        \dot{\alpha}_i (1 - \dot{\alpha}_i)
+      }
+    \end{aligned}
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̈</mml:mo></mml:mover><mml:mrow><mml:mi>i</mml:mi><mml:mo>,</mml:mo><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mi>ϕ</mml:mi><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msubsup><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mi>i</mml:mi><mml:mn>2</mml:mn></mml:msubsup></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mi>ϕ</mml:mi><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msubsup><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mi>i</mml:mi><mml:mn>2</mml:mn></mml:msubsup></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>ϕ</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̈</mml:mo></mml:mover><mml:mrow><mml:mi>i</mml:mi><mml:mo>,</mml:mo><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msubsup><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mi>i</mml:mi><mml:mn>2</mml:mn></mml:msubsup></mml:mrow><mml:mrow><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
+    <p>Consider the case of only two ancestral sources.
+    With <inline-formula><alternatives>
+    <tex-math><![CDATA[\beta := \ddot{\alpha}_{0,1} + \ddot{\alpha}_{1,0}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>β</mml:mi><mml:mo>:=</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̈</mml:mo></mml:mover><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̈</mml:mo></mml:mover><mml:mrow><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> we deduce that
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \ddot{\alpha}_{0,0} + \ddot{\alpha}_{1,1}  = 1 - \beta
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̈</mml:mo></mml:mover><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̈</mml:mo></mml:mover><mml:mrow><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>β</mml:mi></mml:mrow></mml:math></alternatives></disp-formula>
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \dot{\alpha}_1 = 1 - \dot{\alpha}_0
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>1</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:math></alternatives></disp-formula>
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \dot{\alpha}_0^2 + \dot{\alpha}_1^2  = 1 - 2 \dot{\alpha}_0 (1 - \dot{\alpha}_0)
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msubsup><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo>+</mml:mo><mml:msubsup><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>2</mml:mn><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>0</mml:mn></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>0</mml:mn></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
+    <p><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \begin{aligned}
+    \phi & = \frac{\phi + \phi}{2}  \\
+      & = \frac{
+        \ddot{\alpha}_{0,0} + \ddot{\alpha}_{1,1} - \dot{\alpha}_0^2 - \dot{\alpha}_1^2
+      }{
+        2 \dot{\alpha}_0 (1 - \dot{\alpha}_0)
+      } \\
+      & = 1 - \frac{\beta}{ 2 \dot{\alpha}_0 (1 - \dot{\alpha}_0) }
+    \end{aligned}
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mi>ϕ</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mi>ϕ</mml:mi><mml:mo>+</mml:mo><mml:mi>ϕ</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:mfrac></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̈</mml:mo></mml:mover><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̈</mml:mo></mml:mover><mml:mrow><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mo>−</mml:mo><mml:msubsup><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>0</mml:mn><mml:mn>2</mml:mn></mml:msubsup><mml:mo>−</mml:mo><mml:msubsup><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:msubsup></mml:mrow><mml:mrow><mml:mn>2</mml:mn><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>0</mml:mn></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>0</mml:mn></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mfrac><mml:mi>β</mml:mi><mml:mrow><mml:mn>2</mml:mn><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>0</mml:mn></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:msub><mml:mover><mml:mi>α</mml:mi><mml:mo accent="true">̇</mml:mo></mml:mover><mml:mn>0</mml:mn></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula></p>
+    <p>This form is the same as the <italic>inbreeding coefficient</italic> but with
+    ancestral source as the allele state rather than haplotype.</p>
+  </sec>
+  <sec id="theorem-1">
+    <title>Theorem 1</title>
+    <p>The solution to <inline-formula><alternatives>
+    <tex-math><![CDATA[x_t]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>x</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:math></alternatives></inline-formula> given stationarity etc…
+    can not be
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    x_i = \frac{ 1 + \sqrt{1 - 4 \phi (1- \phi) \alpha_i} }{ 2(1-\phi) }
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>x</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:msqrt><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:mi>ϕ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msqrt></mml:mrow><mml:mrow><mml:mn>2</mml:mn><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:mrow></mml:math></alternatives></disp-formula>
+    when <inline-formula><alternatives>
+    <tex-math><![CDATA[\alpha_i < 1]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>&lt;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+    <p><bold>PROOF</bold></p>
+    <p>Assume the contrary. Since <inline-formula><alternatives>
+    <tex-math><![CDATA[\phi < 1]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>ϕ</mml:mi><mml:mo>&lt;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula> and <inline-formula><alternatives>
+    <tex-math><![CDATA[x_i \le 1]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>x</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>≤</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>, we have
+    <disp-formula><alternatives>
+    <tex-math><![CDATA[
+    \begin{aligned}
+    1 & \ge \frac{ 1 + \sqrt{1 - 4 \phi (1- \phi) \alpha_i} }{ 2(1-\phi) }  \\
+    2(1-\phi) & \ge 1 + \sqrt{1 - 4 \phi (1- \phi) \alpha_i}  \\
+    1- 2 \phi & \ge \sqrt{1 - 4 \phi (1- \phi) \alpha_i}  \\
+    1 - 4 \phi + 4 \phi^2 & \ge 1 - 4 \phi (1- \phi) \alpha_i  \\
+    - 4 \phi (1- \phi) & \ge - 4 \phi (1- \phi) \alpha_i  \\
+    1 & \le \alpha_i  \\
+    \end{aligned}
+    ]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mtable><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mn>1</mml:mn></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>≥</mml:mo><mml:mfrac><mml:mrow><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:msqrt><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:mi>ϕ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msqrt></mml:mrow><mml:mrow><mml:mn>2</mml:mn><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mn>2</mml:mn><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>≥</mml:mo><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:msqrt><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:mi>ϕ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msqrt></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>2</mml:mn><mml:mi>ϕ</mml:mi></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>≥</mml:mo><mml:msqrt><mml:mrow><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:mi>ϕ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow></mml:msqrt></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:mi>ϕ</mml:mi><mml:mo>+</mml:mo><mml:mn>4</mml:mn><mml:msup><mml:mi>ϕ</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>≥</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:mi>ϕ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:mi>ϕ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>≥</mml:mo><mml:mo>−</mml:mo><mml:mn>4</mml:mn><mml:mi>ϕ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo>−</mml:mo><mml:mi>ϕ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right" style="text-align: right"><mml:mn>1</mml:mn></mml:mtd><mml:mtd columnalign="left" style="text-align: left"><mml:mo>≤</mml:mo><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mtd></mml:mtr></mml:mtable></mml:math></alternatives></disp-formula>
+    which can not be true given <inline-formula><alternatives>
+    <tex-math><![CDATA[\alpha_i < 1]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>α</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>&lt;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+  </sec>
+</sec>
+</body>
+<back>
+</back>
+</article>
