@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN"
+                  "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+<front>
+<journal-meta>
+<journal-id></journal-id>
+<journal-title-group>
+</journal-title-group>
+<issn></issn>
+<publisher>
+<publisher-name></publisher-name>
+</publisher>
+</journal-meta>
+<article-meta>
+<title-group>
+<article-title>What is a baseprint?</article-title>
+</title-group>
+<contrib-group>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-5014-4809</contrib-id>
+<name>
+<surname>Ellerman</surname>
+<given-names>E. Castedo</given-names>
+</name>
+<email>castedo@castedo.com</email>
+</contrib>
+</contrib-group>
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2023-05-15">
+<day>15</day>
+<month>5</month>
+<year>2023</year>
+</pub-date>
+<permissions>
+<copyright-statement>© 2023, Ellerman et al</copyright-statement>
+<copyright-year>2023</copyright-year>
+<copyright-holder>Ellerman et al</copyright-holder>
+<license license-type="open-access">
+<ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/">https://creativecommons.org/licenses/by/4.0/</ali:license_ref>
+<license-p>This document is distributed under a Creative Commons Attribution 4.0 International license.</license-p>
+</license>
+</permissions>
+<abstract>
+<p><bold>STAGE</bold>: DRAFT.</p>
+<p>A baseprint is a digitally encoded document
+created to disseminate research
+across independent websites
+in both PDF and HTML formats.
+Compared to PDF files, baseprints have several advantages for research communication
+by combining features of preprints and blog posts.
+A preliminary type of baseprint is based on JATS4R (JATS XML) and Software Heritage IDs.
+However, as of 2022,
+the technology for working with baseprints is new and still under development,
+and
+the tools for working with baseprints are not yet user-friendly.</p>
+</abstract>
+</article-meta>
+</front>
+<body>
+<sec id="summary">
+  <title>Summary</title>
+  <p>Multiple independent websites
+  can automatically generate
+  both a PDF file and an HTML page
+  from a baseprint digitally encoded in JATS XML.
+  JATS XML is often used to encode journal articles
+  published in both PDF and HTML formats,
+  many of which appear on both the publisher’s website and PubMed Central,
+  a US government agency website for scientific literature.</p>
+  <p>Baseprints provide features of preprints and blog posts
+  through the generation of PDF files and HTML pages.
+  The following table summarizes
+  the advantages of baseprints over PDF preprints and blog posts:</p>
+  <table-wrap>
+    <table>
+      <thead>
+        <tr>
+          <th align="left">Feature</th>
+          <th align="left">PDF preprint</th>
+          <th align="left">Blog post</th>
+          <th align="left">JATS XML</th>
+          <th align="left">Baseprint</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left">Designed for different displays</td>
+          <td align="left"></td>
+          <td align="left">Yes</td>
+          <td align="left">Yes</td>
+          <td align="left">Yes</td>
+        </tr>
+        <tr>
+          <td align="left">Clone documents across multiple websites</td>
+          <td align="left">Yes</td>
+          <td align="left"></td>
+          <td align="left"></td>
+          <td align="left">Yes</td>
+        </tr>
+        <tr>
+          <td align="left">Document metadata like journal articles</td>
+          <td align="left"></td>
+          <td align="left"></td>
+          <td align="left">Yes</td>
+          <td align="left">Yes</td>
+        </tr>
+        <tr>
+          <td align="left">Target of intrinsic identifier</td>
+          <td align="left"></td>
+          <td align="left"></td>
+          <td align="left"></td>
+          <td align="left">Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </table-wrap>
+</sec>
+<sec id="pdf-html-and-the-format-of-record">
+  <title>PDF, HTML, and the format of record</title>
+  <p>Journals present research in both PDF and HTML formats,
+  a benefit that is absent or very limited in preprint servers.
+  Baseprints can also be used to present research in both formats,
+  as they are rendered into both.</p>
+  <p>Millions of journal articles are encoded in JATS XML
+  and rendered into HTML web pages at PubMed Central.
+  Some journals render JATS XML into both PDF and HTML.
+  PDF and HTML are presentation formats,
+  whereas a <italic><ext-link ext-link-type="uri" xlink:href="https://rivervalley.io/format-of-record/">format of record</ext-link></italic>
+  <xref alt="1" rid="ref-bazargan_format_of_record" ref-type="bibr">1</xref> is a digital encoding
+  that is archived and rendered into presentation formats.
+  Baseprints are digitally encoded in a format of record,
+  which can be JATS XML.
+  However, baseprints can also be encoded in multiple formats,
+  just as spreadsheets can be encoded in multiple formats.</p>
+</sec>
+<sec id="choice-of-websites">
+  <title>Choice of websites</title>
+  <p>With baseprints, readers not only choose their preferred presentation format,
+  but also their preferred website,
+  just like they can choose between PubMed Central and a journal website for some articles.
+  If articles were only available on journal websites,
+  readers would miss out on the unique features of PubMed Central.
+  Additionally, new websites can provide features that do not yet exist.
+  Having multiple websites also reduces the risk of research becoming unavailable.</p>
+</sec>
+<sec id="baseprint-identity">
+  <title>Baseprint identity</title>
+  <p>Bibliographic references should unambiguously identify research documents.
+  A web address (URL) is not sufficient
+  for identifying a baseprint,
+  as multiple websites can present
+  a baseprint and no single website is the authoritative source.
+  Instead of referencing a web address,
+  baseprints are referenced with an
+  <ext-link ext-link-type="uri" xlink:href="https://www.softwareheritage.org/2020/07/09/intrinsic-vs-extrinsic-identifiers/">intrinsic identifier</ext-link>
+  <xref alt="2" rid="ref-intrinsic_extrinsic_identifiers" ref-type="bibr">2</xref>,
+  such as a Software Heritage ID (SWHID)
+  <xref alt="3" rid="ref-cosmo_referencing_2020" ref-type="bibr">3</xref>, <xref alt="4" rid="ref-dicosmoU003Ahal-01865790" ref-type="bibr">4</xref>.
+  The identity of a baseprint is determined by its exact digital encoding,
+  which is a sequence of bytes
+  if it consists of a single file.
+  If a baseprint consists of a directory of files,
+  the digital encoding can be a <italic>git tree</italic>.
+  A SWHID identifies a baseprint
+  with a cryptographic hash of its digital encoding.</p>
+  <p>Another identifier of research documents is the Digital Object Identifier (DOI).
+  Both the DOI and the SWHID are persistent identifiers,
+  but unlike the SWHID, the DOI is an
+  <ext-link ext-link-type="uri" xlink:href="https://www.softwareheritage.org/2020/07/09/intrinsic-vs-extrinsic-identifiers/">extrinsic identifier</ext-link>
+  <xref alt="2" rid="ref-intrinsic_extrinsic_identifiers" ref-type="bibr">2</xref>
+  that depends on a DOI registrant and publisher.
+  A baseprint may have both a SWHID and a DOI.
+  Another type of persistent identifier is the
+  <ext-link ext-link-type="uri" xlink:href="https://popgen.es/ji2STto1mZ3i2BmnGxbkebejKH4/1">Digital Succession Identifier (DSI)</ext-link>
+  <xref alt="5" rid="ref-dsiU003AjiU002F1" ref-type="bibr">5</xref>.
+  If a baseprint has been added to a digital succession,
+  it can be identified by either its SWHID or a DSI with an edition number.
+  A DSI can even identify baseprints that have yet to be created.</p>
+</sec>
+<sec id="research-document-metadata">
+  <title>Research document metadata</title>
+  <p>Bibliographic references encoded in a computer-understandable format
+  are an example of research document metadata.
+  Other examples include
+  titles,
+  abstracts,
+  contributors,
+  email addresses,
+  contributor identifiers,
+  inline citations,
+  copyright,
+  and licensing terms.
+  This metadata helps
+  search engines,
+  citation analysis,
+  article discovery tools,
+  and other computer applications.
+  Baseprints include research document metadata,
+  which can be encoded in JATS XML or other formats.</p>
+</sec>
+<sec id="conclusion">
+  <title>Conclusion</title>
+  <p>Baseprints are digitally encoded documents that are:</p>
+  <list list-type="bullet">
+    <list-item>
+      <p>presented across multiple websites,</p>
+    </list-item>
+    <list-item>
+      <p>rendered in both PDF and HTML formats,</p>
+    </list-item>
+    <list-item>
+      <p>encoded and archived in a format of record such as JATS XML,</p>
+    </list-item>
+    <list-item>
+      <p>referenced with an intrinsic identifier such as a Software Heritage ID (SWHID), and</p>
+    </list-item>
+    <list-item>
+      <p>include research document metadata (e.g., title, abstract, contributors, email addresses, contributor identifiers, inline citations, copyright, and licensing).</p>
+    </list-item>
+  </list>
+</sec>
+<sec id="acknowledgments">
+  <title>Acknowledgments</title>
+  <p>I thank my parents for their evaluations
+  of copyediting by GPT and feedback on this document.
+  I used the OpenAI API with GPT 3.5 for substantial copyediting of this document.</p>
+</sec>
+</body>
+<back>
+<ref-list><title>References</title>
+  <ref id="ref-dsiU003AjiU002F1">
+    <element-citation>
+      <person-group person-group-type="author">
+        <name><surname>Ellerman</surname><given-names>E. Castedo</given-names></name>
+      </person-group>
+      <article-title>Digital succession identifiers</article-title>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://perm.pub/ji2STto1mZ3i2BmnGxbkebejKH4/1</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-cosmo_referencing_2020">
+    <element-citation publication-type="article-journal">
+      <person-group person-group-type="author">
+        <name><surname>Cosmo</surname><given-names>Roberto Di</given-names></name>
+        <name><surname>Gruenpeter</surname><given-names>Morane</given-names></name>
+        <name><surname>Zacchiroli</surname><given-names>Stefano</given-names></name>
+      </person-group>
+      <article-title>Referencing Source Code Artifacts: A Separate Concern in Software Citation</article-title>
+      <source>Computing in Science &amp; Engineering</source>
+      <year iso-8601-date="2020-03">2020</year><month>03</month>
+      <date-in-citation content-type="access-date"><year iso-8601-date="2022-09-05">2022</year><month>09</month><day>05</day></date-in-citation>
+      <volume>22</volume>
+      <issue>2</issue>
+      <issn>1521-9615, 1558-366X</issn>
+      <uri>https://ieeexplore.ieee.org/document/8946737/</uri>
+      <pub-id pub-id-type="doi">10.1109/MCSE.2019.2963148</pub-id>
+      <fpage>33</fpage>
+      <lpage>43</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-dicosmoU003Ahal-01865790">
+    <element-citation publication-type="paper-conference">
+      <person-group person-group-type="author">
+        <name><surname>Di Cosmo</surname><given-names>Roberto</given-names></name>
+        <name><surname>Gruenpeter</surname><given-names>Morane</given-names></name>
+        <name><surname>Zacchiroli</surname><given-names>Stefano</given-names></name>
+      </person-group>
+      <article-title>Identifiers for Digital Objects: the Case of Software Source Code Preservation</article-title>
+      <source>iPRES 2018 - 15th International Conference on Digital Preservation</source>
+      <publisher-loc>Boston, United States</publisher-loc>
+      <year iso-8601-date="2018-09">2018</year><month>09</month>
+      <uri>https://hal.archives-ouvertes.fr/hal-01865790</uri>
+      <fpage>1</fpage>
+      <lpage>9</lpage>
+    </element-citation>
+  </ref>
+  <ref id="ref-bazargan_format_of_record">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <name><surname>Bazargan</surname><given-names>Kaveh</given-names></name>
+      </person-group>
+      <article-title>XML – why it should be the “format of record”</article-title>
+      <year iso-8601-date="2022">2022</year>
+      <uri>https://web.archive.org/web/20220920180031/https://rivervalley.io/format-of-record/</uri>
+    </element-citation>
+  </ref>
+  <ref id="ref-intrinsic_extrinsic_identifiers">
+    <element-citation publication-type="webpage">
+      <person-group person-group-type="author">
+        <name><surname>Heritage</surname><given-names>Software</given-names></name>
+      </person-group>
+      <article-title>Intrinsic and extrinsic identifiers</article-title>
+      <year iso-8601-date="2020">2020</year>
+      <uri>https://web.archive.org/web/20221019201056/https://www.softwareheritage.org/2020/07/09/intrinsic-vs-extrinsic-identifiers/</uri>
+    </element-citation>
+  </ref>
+</ref-list>
+</back>
+</article>
