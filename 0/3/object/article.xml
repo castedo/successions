@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+  <front>
+    <journal-meta>
+      <journal-id/>
+      <journal-title-group>
+</journal-title-group>
+      <issn/>
+      <publisher>
+        <publisher-name/>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title>Gametic lineage space</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-5014-4809</contrib-id>
+          <name>
+            <surname>Ellerman</surname>
+            <given-names>E. Castedo</given-names>
+          </name>
+          <email>castedo@castedo.com</email>
+        </contrib>
+      </contrib-group>
+      <pub-date date-type="eprint" publication-format="electronic" iso-8601-date="2023-03-06">
+        <day>6</day>
+        <month>3</month>
+        <year>2023</year>
+      </pub-date>
+      <permissions>
+        <copyright-statement>© 2023, Ellerman et al</copyright-statement>
+        <copyright-year>2023</copyright-year>
+        <copyright-holder>Ellerman et al</copyright-holder>
+        <license license-type="open-access">
+          <ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/">https://creativecommons.org/licenses/by/4.0/</ali:license_ref>
+          <license-p>This document is distributed under a Creative Commons Attribution 4.0 International license.</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p><bold>STAGE:</bold> WORKING DRAFT</p>
+        <p><bold>DOCUMENT TYPE:</bold> Definition Document</p>
+        <p>
+          <bold>OBJECTIVES</bold>
+        </p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Formal mathematical definition to be used in stochastic process model under
+    development.</p>
+          </list-item>
+          <list-item>
+            <p>Solicit feedback, in particular, on choice of wording for definitions.</p>
+          </list-item>
+          <list-item>
+            <p>Precise mathematical definitions for technical discussions relating to ancestral
+    recombination graphs</p>
+          </list-item>
+        </list>
+      </abstract>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="gametic-genealogy">
+      <title>Gametic genealogy</title>
+      <p>A <italic>gametic genealogy</italic> is a convenient mathematical formalism of the genealogy
+  of a population from the perspective of gametes. Mathematically, it is a quadruple
+  <disp-formula><alternatives><tex-math><![CDATA[
+  (\mathsf{Gam}, \mathsf{Mate}, \mathsf{Par}, \mathsf{Fert}) 
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖥</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗋</mml:mi><mml:mi>𝗍</mml:mi></mml:mstyle><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></disp-formula>
+  with components</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula>, the set of underlying gametes,</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Mate}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula>, the set of zygotes formed by the fusion of egg gametes and sperm gametes,</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Par}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula>, a mapping from child gametes to parent zygotes, and</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Fert}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖥</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗋</mml:mi><mml:mi>𝗍</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula>, a mapping from zygotes to fertilization time.</p>
+        </list-item>
+      </list>
+      <p>For convenience, given a <italic>gametic genealogy</italic>,</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Gam}_0]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>0</mml:mn></mml:msub></mml:math></alternatives></inline-formula> denotes the set of egg gametes,</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Gam}_1]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula> denotes the set of sperm gametes, and</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Mate}_*]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle><mml:mo>*</mml:mo></mml:msub></mml:math></alternatives></inline-formula> denotes the mapping from gametes to the zygotes they formed during
+      fertilization.</p>
+        </list-item>
+      </list>
+      <p>Formally, a <italic>gametic genealogy</italic> must satisfy the following conditions.</p>
+      <list list-type="order">
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Gam}_0 \cup \mathsf{Gam}_1 = \mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>0</mml:mn></mml:msub><mml:mo>∪</mml:mo><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>1</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula> and <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Gam}_0 \cap \mathsf{Gam}_1 = \emptyset]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>0</mml:mn></mml:msub><mml:mo>∩</mml:mo><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>1</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mi>∅</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Mate}\subset \mathsf{Gam}_0 \times \mathsf{Gam}_1]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle><mml:mo>⊂</mml:mo><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>0</mml:mn></mml:msub><mml:mo>×</mml:mo><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>1</mml:mn></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> and
+      forms a one-to-one mapping between <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Gam}_0]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>0</mml:mn></mml:msub></mml:math></alternatives></inline-formula> and <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Gam}_1]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula>.</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Par}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula> is a function <inline-formula><alternatives><tex-math><![CDATA[C \mapsto \mathsf{Mate}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>C</mml:mi><mml:mo>↦</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula>, where <inline-formula><alternatives><tex-math><![CDATA[C]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>C</mml:mi></mml:math></alternatives></inline-formula> is a subset of <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula> representing
+      child gametes.</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Fert}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖥</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗋</mml:mi><mml:mi>𝗍</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula> is a function <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Mate}\mapsto \mathbb{R}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle><mml:mo>↦</mml:mo><mml:mstyle mathvariant="double-struck"><mml:mi>ℝ</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula> such that for all child gametes
+      <inline-formula><alternatives><tex-math><![CDATA[g \in \operatorname{dom}\mathsf{Par}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mo>dom</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula>,
+      <disp-formula><alternatives><tex-math><![CDATA[
+      \mathsf{Fert}(\mathsf{Mate}_*(g)) > \mathsf{Fert}(\mathsf{Par}(g))
+      \text{ .}
+      ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖥</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗋</mml:mi><mml:mi>𝗍</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle><mml:mo>*</mml:mo></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>&gt;</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖥</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗋</mml:mi><mml:mi>𝗍</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> .</mml:mtext></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula>
+      <inline-formula><alternatives><tex-math><![CDATA[\operatorname{dom}\mathsf{Par}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo>dom</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula> denotes the domain of <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Par}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula>, that is, the set of child gametes.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="gametic-lineage-space">
+      <title>Gametic lineage space</title>
+      <p>A <italic>gametic lineage space</italic> is a mathematical formalism representing the lines of
+  transmission of genetic information via gametes of a population over time.
+  It is a triplet
+  <disp-formula><alternatives><tex-math><![CDATA[
+  (\mathsf{Loc}, G, \mathsf{Lin}) 
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖼</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mi>G</mml:mi><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></disp-formula>
+  where</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Loc}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖼</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula> is the set of all genomic locations,</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[G]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>G</mml:mi></mml:math></alternatives></inline-formula> is a gametic genealogy <inline-formula><alternatives><tex-math><![CDATA[(\mathsf{Gam}, \mathsf{Mate}, \mathsf{Par}, \mathsf{Fert})]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖥</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗋</mml:mi><mml:mi>𝗍</mml:mi></mml:mstyle><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>, and</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Lin}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula> is a function <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Loc}\times \mathsf{Gam}\mapsto 2^\mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖼</mml:mi></mml:mstyle><mml:mo>×</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mo>↦</mml:mo><mml:msup><mml:mn>2</mml:mn><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> mapping a genomic position
+      in a gamete to the set of gametes that transmitted genetic information to that
+      position in that gamete.</p>
+        </list-item>
+      </list>
+      <p>For every location <inline-formula><alternatives><tex-math><![CDATA[\ell \in \mathsf{Loc}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo>ℓ</mml:mo><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖼</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula> and gamete <inline-formula><alternatives><tex-math><![CDATA[g \in \mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula>, <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Lin}(\ell, g)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>,</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula> is
+  the lineage ending at gamete <inline-formula><alternatives><tex-math><![CDATA[g]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>g</mml:mi></mml:math></alternatives></inline-formula> via locus <inline-formula><alternatives><tex-math><![CDATA[\ell]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mo>ℓ</mml:mo></mml:math></alternatives></inline-formula> and it must satisfy the
+  condition
+  <disp-formula><alternatives><tex-math><![CDATA[
+  \mathsf{Lin}(\ell, g) = \{g\} \cup \mathsf{Lin}(\ell, \mathsf{Par}(g)_i) \text{ for either $i=0$ or $i=1$}
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>,</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mo>∪</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle><mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> for either </mml:mtext><mml:mspace width="0.333em"/></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> or </mml:mtext><mml:mspace width="0.333em"/></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula>
+  when <inline-formula><alternatives><tex-math><![CDATA[g \in \operatorname{dom}\mathsf{Par}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mo>dom</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula>, otherwise <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Lin}(\ell, g) = \{g\}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>,</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+      <p><inline-formula><alternatives><tex-math><![CDATA[\mathsf{Par}(g)_0]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle><mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>0</mml:mn></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> and <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Par}(g)_1]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle><mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>1</mml:mn></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> are the maternal and paternal gametes,
+  respectively, that fertilized the parent of <inline-formula><alternatives><tex-math><![CDATA[g]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>g</mml:mi></mml:math></alternatives></inline-formula>.</p>
+    </sec>
+    <sec id="stochastic-gametic-lineage-space">
+      <title>Stochastic gametic lineage space</title>
+      <p>A <italic>stochastic gametic lineage space</italic> is a gametic lineage space extended to model a
+  random gametic lineage.</p>
+      <p>From a stochastic gametic linage space, a time-indexed family of probability
+  distributions <inline-formula><alternatives><tex-math><![CDATA[\{ P_t \}_{t \in I}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>P</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>∈</mml:mo><mml:mi>I</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is induced.</p>
+      <disp-quote>
+        <p>TO DO:
+    Need to rework space formalism to clarify over what is the <inline-formula><alternatives><tex-math><![CDATA[\sigma]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula>-algebra:
+    <ext-link ext-link-type="uri" xlink:href="https://gitlab.com/castedo/study-docs/-/issues/42">issues #42</ext-link>.</p>
+      </disp-quote>
+      <p>For convenience we define the set of all lineages that contain a gamete <inline-formula><alternatives><tex-math><![CDATA[g \in \mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula> as
+  <disp-formula><alternatives><tex-math><![CDATA[
+  B(g) := \{ \mathsf{Lin}(\ell, s) : g \in \mathsf{Lin}(\ell,s), \ell \in \mathsf{Loc}, s \in \mathsf{Gam}\}
+  \text{ .}
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mi>B</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>:=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>,</mml:mo><mml:mi>s</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>:</mml:mo><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>,</mml:mo><mml:mi>s</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>,</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖼</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mi>s</mml:mi><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> .</mml:mtext></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
+      <p>Formally, a <italic>stochastic gametic lineage space</italic> is a quintuple
+  <disp-formula><alternatives><tex-math><![CDATA[
+  (G, I, \{ S_i \}_{i \in I}, \mathcal{F}, \mu)
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>G</mml:mi><mml:mo>,</mml:mo><mml:mi>I</mml:mi><mml:mo>,</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>∈</mml:mo><mml:mi>I</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mstyle mathvariant="script"><mml:mi>ℱ</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mi>μ</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></disp-formula>
+  where</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[G]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>G</mml:mi></mml:math></alternatives></inline-formula> is a gametic lineage space <inline-formula><alternatives><tex-math><![CDATA[(\mathsf{Loc}, (\mathsf{Gam}, \mathsf{Mate}, \mathsf{Par}, \mathsf{Fert}), \mathsf{Lin})]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖼</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖥</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗋</mml:mi><mml:mi>𝗍</mml:mi></mml:mstyle><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>,</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula></p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[I]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>I</mml:mi></mml:math></alternatives></inline-formula> is an index set of points in time with <inline-formula><alternatives><tex-math><![CDATA[\operatorname{rng}\mathsf{Fert}\subset I]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo>rng</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖥</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗋</mml:mi><mml:mi>𝗍</mml:mi></mml:mstyle><mml:mo>⊂</mml:mo><mml:mi>I</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>,</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\{S_t\}_{t \in I}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>∈</mml:mo><mml:mi>I</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> is a time-indexed collection of sets of living zygotes,</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mathcal{F}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="script"><mml:mi>ℱ</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula> is a <inline-formula><alternatives><tex-math><![CDATA[\sigma]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula>-algebra (<inline-formula><alternatives><tex-math><![CDATA[sigma]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>s</mml:mi><mml:mi>i</mml:mi><mml:mi>g</mml:mi><mml:mi>m</mml:mi><mml:mi>a</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>-field) over <inline-formula><alternatives><tex-math><![CDATA[\operatorname{rng}\mathsf{Lin}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo>rng</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula>, and</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mu]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>μ</mml:mi></mml:math></alternatives></inline-formula> is a measure on <inline-formula><alternatives><tex-math><![CDATA[\mathcal{F}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="script"><mml:mi>ℱ</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula></p>
+        </list-item>
+      </list>
+      <p>which satisfy the following conditions</p>
+      <list list-type="bullet">
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[B(g) \in \mathcal{F}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>B</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>∈</mml:mo><mml:mstyle mathvariant="script"><mml:mi>ℱ</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula> for all <inline-formula><alternatives><tex-math><![CDATA[g \in \mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula>, and</p>
+        </list-item>
+        <list-item>
+          <p><inline-formula><alternatives><tex-math><![CDATA[\mu(S_t)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>μ</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>S</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula> is defined and finite for all <inline-formula><alternatives><tex-math><![CDATA[t \in I]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>t</mml:mi><mml:mo>∈</mml:mo><mml:mi>I</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>.</p>
+        </list-item>
+      </list>
+      <p>Every gametic lineage space induces a time-indexed family
+  <inline-formula><alternatives><tex-math><![CDATA[\{P_t\}_{t \in I}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mi>P</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:msub><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mi>t</mml:mi><mml:mo>∈</mml:mo><mml:mi>I</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></alternatives></inline-formula> of probabilities spaces measurable on <inline-formula><alternatives><tex-math><![CDATA[\sigma]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula>-algebra <inline-formula><alternatives><tex-math><![CDATA[F]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>F</mml:mi></mml:math></alternatives></inline-formula>.
+  This defines the probability of lineages which end in a zygote alive at time <inline-formula><alternatives><tex-math><![CDATA[t]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>.</p>
+      <disp-quote>
+        <p>TO DO:
+    Need to clarify relationship between <inline-formula><alternatives><tex-math><![CDATA[F]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>F</mml:mi></mml:math></alternatives></inline-formula> and <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Loc}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖼</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula> and <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Mate}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖬</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗍</mml:mi><mml:mi>𝖾</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula> for when they are
+    uncountable.</p>
+      </disp-quote>
+    </sec>
+    <sec id="an-embedded-ancestral-recombination-graph">
+      <title>An embedded Ancestral Recombination Graph</title>
+      <p>An ancestral recombination graph
+  <xref alt="1" rid="ref-friedman_ancestral_1997" ref-type="bibr">1</xref> <xref alt="2" rid="ref-hein_gene_2005" ref-type="bibr">2</xref> <xref alt="3" rid="ref-wakeley_coalescent_2009" ref-type="bibr">3</xref>
+  of a sampled population is embedded in a gametic lineage space.
+  We formally show the exact embedding using the gARG formalism <xref alt="4" rid="ref-wong_what_arg_2022" ref-type="bibr">4</xref>.</p>
+      <p>We start by defining the <italic>genetic legacy</italic> of a gamete <inline-formula><alternatives><tex-math><![CDATA[g \in \mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula> for sample population
+  <inline-formula><alternatives><tex-math><![CDATA[S \subseteq \mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>S</mml:mi><mml:mo>⊆</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula> to be
+  <disp-formula><alternatives><tex-math><![CDATA[
+    \mathsf{Leg}(g, S) := \{ (\ell, d) \in \mathsf{Loc}\times S : g \in \mathsf{Lin}(\ell, d) \}
+  \text{ .}
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗀</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo>,</mml:mo><mml:mi>S</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>:=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>,</mml:mo><mml:mi>d</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖼</mml:mi></mml:mstyle><mml:mo>×</mml:mo><mml:mi>S</mml:mi><mml:mo>:</mml:mo><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>,</mml:mo><mml:mi>d</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> .</mml:mtext></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula>
+  This genetic legacy is the genetic material that survives in the sample
+  population <inline-formula><alternatives><tex-math><![CDATA[S]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>S</mml:mi></mml:math></alternatives></inline-formula> originally copied from ancestral gamete <inline-formula><alternatives><tex-math><![CDATA[g]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>g</mml:mi></mml:math></alternatives></inline-formula> (with or without
+  mutations).</p>
+      <p>Genetic legacy for a sample population <inline-formula><alternatives><tex-math><![CDATA[S]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>S</mml:mi></mml:math></alternatives></inline-formula> induces the following equivalence
+  relationship over pairs of gametes <inline-formula><alternatives><tex-math><![CDATA[g_1]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mi>g</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:math></alternatives></inline-formula> and <inline-formula><alternatives><tex-math><![CDATA[g_2]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:msub><mml:mi>g</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:math></alternatives></inline-formula> in <inline-formula><alternatives><tex-math><![CDATA[\mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:math></alternatives></inline-formula>:
+  <disp-formula><alternatives><tex-math><![CDATA[
+  g_1 \simeq_S g_2 \ := \ \mathsf{Leg}(g_1, S) = \mathsf{Leg}(g_2, S)
+  \text{ .}
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:msub><mml:mi>g</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:msub><mml:mo>≃</mml:mo><mml:mi>S</mml:mi></mml:msub><mml:msub><mml:mi>g</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mspace width="0.222em"/><mml:mo>:=</mml:mo><mml:mspace width="0.222em"/><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗀</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:mi>S</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗀</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>g</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:mi>S</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> .</mml:mtext></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula>
+  We denote the resulting equivalence class containing <inline-formula><alternatives><tex-math><![CDATA[g \in \mathsf{Gam}]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle></mml:mrow></mml:math></alternatives></inline-formula> as
+  <disp-formula><alternatives><tex-math><![CDATA[
+  {[g]}_S \ := \ \{ g' : \mathsf{Leg}(g', S) = \mathsf{Leg}(g, S) \}
+  \text{ .}
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mi>S</mml:mi></mml:msub><mml:mspace width="0.222em"/><mml:mo>:=</mml:mo><mml:mspace width="0.222em"/><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mi>g</mml:mi><mml:mi>′</mml:mi><mml:mo>:</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗀</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mi>′</mml:mi><mml:mo>,</mml:mo><mml:mi>S</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗀</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo>,</mml:mo><mml:mi>S</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> .</mml:mtext></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
+      <p>In this equivalence relationship, gametes are considered equivalent if
+  they have the same genetic legacy for the sample population <inline-formula><alternatives><tex-math><![CDATA[S]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>S</mml:mi></mml:math></alternatives></inline-formula>.</p>
+      <p>A convenient choice for an embedded gARG <xref alt="4" rid="ref-wong_what_arg_2022" ref-type="bibr">4</xref> is to set the gARG
+  nodes (vertices) to be the equivalence classes:
+  <disp-formula><alternatives><tex-math><![CDATA[
+     \mathsf{Nodes}(S) := \{ {[g]}_S : g \in \mathsf{Gam}\}
+  \text{ .}
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖭</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖽</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗌</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>S</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>:=</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mi>S</mml:mi></mml:msub><mml:mo>:</mml:mo><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖦</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗆</mml:mi></mml:mstyle><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> .</mml:mtext></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
+      <p>The (unannotated) graph edges of the gARG are chosen as child-parent node pairs
+  <inline-formula><alternatives><tex-math><![CDATA[(C, P) \in \mathsf{Nodes}(S)^2]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>C</mml:mi><mml:mo>,</mml:mo><mml:mi>P</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖭</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖽</mml:mi><mml:mi>𝖾</mml:mi><mml:mi>𝗌</mml:mi></mml:mstyle><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>S</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:math></alternatives></inline-formula> where
+  <disp-formula><alternatives><tex-math><![CDATA[
+    \mathsf{Par}(g)_i \in P \text{ for some $g \in C$ and some $i \in \{0, 1\}$ .}
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖯</mml:mi><mml:mi>𝖺</mml:mi><mml:mi>𝗋</mml:mi></mml:mstyle><mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>i</mml:mi></mml:msub><mml:mo>∈</mml:mo><mml:mi>P</mml:mi><mml:mrow><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> for some </mml:mtext><mml:mspace width="0.333em"/></mml:mrow><mml:mrow><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> and some </mml:mtext><mml:mspace width="0.333em"/></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>∈</mml:mo><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mn>0</mml:mn><mml:mo>,</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false" form="postfix">}</mml:mo></mml:mrow><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> .</mml:mtext></mml:mrow></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
+      <p>In the gARG, annotations are added for each graph edge (pair of child and parent nodes).
+  This annotation is the set of locations through which genetic information has been
+  copied from parent to child. In the following interpretation, the only locations of
+  interest are those for which genetic information has been transmitted into
+  the sample population <inline-formula><alternatives><tex-math><![CDATA[S]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mi>S</mml:mi></mml:math></alternatives></inline-formula>.
+  With this interpretation, the annotation for edge <inline-formula><alternatives><tex-math><![CDATA[(C,P)]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="inline"><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>C</mml:mi><mml:mo>,</mml:mo><mml:mi>P</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></inline-formula> is
+  <disp-formula><alternatives><tex-math><![CDATA[
+    \{ \ell \in \mathsf{Loc}:
+       C \cup P \subseteq \mathsf{Lin}(\ell, g) \text{ for some $g \in S$}
+    \}
+  \text{ .}
+  ]]></tex-math><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mml:mrow><mml:mo stretchy="false" form="prefix">{</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>∈</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗈</mml:mi><mml:mi>𝖼</mml:mi></mml:mstyle><mml:mo>:</mml:mo><mml:mi>C</mml:mi><mml:mo>∪</mml:mo><mml:mi>P</mml:mi><mml:mo>⊆</mml:mo><mml:mstyle mathvariant="sans-serif"><mml:mi>𝖫</mml:mi><mml:mi>𝗂</mml:mi><mml:mi>𝗇</mml:mi></mml:mstyle><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>ℓ</mml:mo><mml:mo>,</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mrow><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> for some </mml:mtext><mml:mspace width="0.333em"/></mml:mrow><mml:mrow><mml:mi>g</mml:mi><mml:mo>∈</mml:mo><mml:mi>S</mml:mi></mml:mrow></mml:mrow><mml:mo stretchy="false" form="postfix">}</mml:mo><mml:mrow><mml:mspace width="0.333em"/><mml:mtext mathvariant="normal"> .</mml:mtext></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></p>
+    </sec>
+    <sec id="acknowledgements">
+      <title>Acknowledgements</title>
+      <p>Thanks to Daria Shipilina and Nick Barton for sharing their preprint
+  <xref alt="5" rid="ref-shipilina_origin_2022" ref-type="bibr">5</xref>
+  and discussing the conjecture in edition 0.1 of this document relating to their
+  preprint.</p>
+    </sec>
+    <sec id="changes-from-edition-0.1">
+      <title>Changes from edition 0.1</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>add section about embedded ARG</p>
+        </list-item>
+        <list-item>
+          <p>removed conjecture relating to <xref alt="5" rid="ref-shipilina_origin_2022" ref-type="bibr">5</xref></p>
+        </list-item>
+      </list>
+    </sec>
+  </body>
+  <back>
+    <ref-list>
+      <title>References</title>
+      <ref id="ref-shipilina_origin_2022">
+        <element-citation publication-type="report">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Shipilina</surname>
+              <given-names>Daria</given-names>
+            </name>
+            <name>
+              <surname>Stankowski</surname>
+              <given-names>Sean</given-names>
+            </name>
+            <name>
+              <surname>Pal</surname>
+              <given-names>Arka</given-names>
+            </name>
+            <name>
+              <surname>Chan</surname>
+              <given-names>Yingguang Frank</given-names>
+            </name>
+            <name>
+              <surname>Barton</surname>
+              <given-names>Nick</given-names>
+            </name>
+          </person-group>
+          <article-title>On the origin and structure of haplotype blocks</article-title>
+          <publisher-name>Preprints</publisher-name>
+          <year iso-8601-date="2022-02">2022</year>
+          <month>02</month>
+          <date-in-citation content-type="access-date">
+            <year iso-8601-date="2022-05-07">2022</year>
+            <month>05</month>
+            <day>07</day>
+          </date-in-citation>
+          <uri>https://www.authorea.com/users/459348/articles/555633-on-the-origin-and-structure-of-haplotype-blocks?commit=ea3b976c235b53636c5db8582945f9e7de8be30c</uri>
+          <pub-id pub-id-type="doi">10.22541/au.164425910.09070763/v1</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="ref-friedman_ancestral_1997">
+        <element-citation publication-type="chapter">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Griffiths</surname>
+              <given-names>Robert C.</given-names>
+            </name>
+            <name>
+              <surname>Marjoram</surname>
+              <given-names>Paul</given-names>
+            </name>
+          </person-group>
+          <article-title>An Ancestral Recombination Graph</article-title>
+          <source>Progress in Population Genetics and Human Evolution</source>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Friedman</surname>
+              <given-names>Avner</given-names>
+            </name>
+            <name>
+              <surname>Miller</surname>
+              <given-names>Willard</given-names>
+            </name>
+            <name>
+              <surname>Donnelly</surname>
+              <given-names>Peter</given-names>
+            </name>
+            <name>
+              <surname>Tavaré</surname>
+              <given-names>Simon</given-names>
+            </name>
+          </person-group>
+          <publisher-name>Springer New York</publisher-name>
+          <publisher-loc>New York, NY</publisher-loc>
+          <year iso-8601-date="1997">1997</year>
+          <date-in-citation content-type="access-date">
+            <year iso-8601-date="2022-07-08">2022</year>
+            <month>07</month>
+            <day>08</day>
+          </date-in-citation>
+          <volume>87</volume>
+          <isbn>978-1-4419-2856-6 978-1-4757-2609-1</isbn>
+          <uri>http://link.springer.com/10.1007/978-1-4757-2609-1_16</uri>
+          <pub-id pub-id-type="doi">10.1007/978-1-4757-2609-1_16</pub-id>
+          <fpage>257</fpage>
+          <lpage>270</lpage>
+        </element-citation>
+      </ref>
+      <ref id="ref-hein_gene_2005">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hein</surname>
+              <given-names>Jotun</given-names>
+            </name>
+            <name>
+              <surname>Schierup</surname>
+              <given-names>Mikkel H.</given-names>
+            </name>
+            <name>
+              <surname>Wiuf</surname>
+              <given-names>Carsten</given-names>
+            </name>
+          </person-group>
+          <source>Gene genealogies, variation and evolution: A primer in coalescent theory</source>
+          <publisher-name>Oxford University Press</publisher-name>
+          <publisher-loc>Oxford ; New York</publisher-loc>
+          <year iso-8601-date="2005">2005</year>
+          <isbn>978-0-19-852995-8 978-0-19-852996-5</isbn>
+        </element-citation>
+      </ref>
+      <ref id="ref-wakeley_coalescent_2009">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wakeley</surname>
+              <given-names>John</given-names>
+            </name>
+          </person-group>
+          <source>Coalescent theory: An introduction</source>
+          <publisher-name>Roberts &amp; Co. Publishers</publisher-name>
+          <publisher-loc>Greenwood Village, Colo</publisher-loc>
+          <year iso-8601-date="2009">2009</year>
+          <isbn>978-0-9747077-5-4</isbn>
+        </element-citation>
+      </ref>
+      <ref id="ref-wong_what_arg_2022">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wong</surname>
+              <given-names>Yan</given-names>
+            </name>
+            <name>
+              <surname>Ignatieva</surname>
+              <given-names>Anastasia</given-names>
+            </name>
+            <name>
+              <surname>Koskela</surname>
+              <given-names>Jere</given-names>
+            </name>
+            <name>
+              <surname>Gorjanc</surname>
+              <given-names>Gregor</given-names>
+            </name>
+            <name>
+              <surname>Wohns</surname>
+              <given-names>Anthony W.</given-names>
+            </name>
+            <name>
+              <surname>Kelleher</surname>
+              <given-names>Jerome</given-names>
+            </name>
+          </person-group>
+          <source>A general and efficient representation of ancestral recombination graphs</source>
+          <publisher-loc>https://archive.softwareheritage.org/swh:1:rev:7df4f1995028cc676a6c1b231e8d7a024666b5fc</publisher-loc>
+          <year iso-8601-date="2022">2022</year>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
+</article>
